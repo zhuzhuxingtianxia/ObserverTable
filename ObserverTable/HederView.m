@@ -55,7 +55,7 @@
         id value = [change objectForKey:NSKeyValueChangeNewKey];
         CGPoint point = [(NSValue*)value CGPointValue];
         [self transformSetting:point.y];
-        
+//        [self zoomSetting:point.y];
     }else{
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
@@ -80,14 +80,12 @@
 
 //方式二
 - (void)transformSetting:(CGFloat)y {
-    //图片高度
-    CGFloat imageHeight = self.bgImgView.frame.size.height;
     //图片上下偏移量
     CGFloat imageOffsetY = y;
     
     if (imageOffsetY <= 0) {
-        CGFloat totalOffset = imageHeight + ABS(imageOffsetY);
-        CGFloat scale = totalOffset / imageHeight;
+        CGFloat totalOffset = sizeH + ABS(imageOffsetY);
+        CGFloat scale = totalOffset / sizeH;
         //简记:CGAffineTransformMake(a,b,c,d,tx,ty) ad缩放bc旋转tx,ty位移,基础的2D矩阵 公式  x=ax+cy+tx  y=bx+dy+ty
         self.bgImgView.transform = CGAffineTransformMake(scale, 0, 0, scale, 0, imageOffsetY / 2.0);
     }

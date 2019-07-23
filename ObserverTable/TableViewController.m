@@ -23,6 +23,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.navigationController.navigationBarHidden = YES;
+    __weak typeof(self) weakSelf = self;
+    self.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
     _header = [[HederView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 200)];
     self.tableView.tableHeaderView = _header;
     //设置数据源一定要在设置为headerView之后
