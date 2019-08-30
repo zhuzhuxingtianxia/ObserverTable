@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B60E2B3322E7235900343E27 /* NavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B60E2B3222E7235900343E27 /* NavigationController.m */; };
 		B697169B1F67911C0008D71F /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B697169A1F67911C0008D71F /* CollectionViewController.m */; };
 		B6BE29851F1F64E7007EF6B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BE29841F1F64E7007EF6B2 /* main.m */; };
 		B6BE29881F1F64E7007EF6B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6BE29871F1F64E7007EF6B2 /* AppDelegate.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B60E2B3122E7235900343E27 /* NavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationController.h; sourceTree = "<group>"; };
+		B60E2B3222E7235900343E27 /* NavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationController.m; sourceTree = "<group>"; };
 		B69716991F67911C0008D71F /* CollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
 		B697169A1F67911C0008D71F /* CollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
 		B6BE29801F1F64E7007EF6B2 /* ObserverTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObserverTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +117,8 @@
 			children = (
 				B6BE29861F1F64E7007EF6B2 /* AppDelegate.h */,
 				B6BE29871F1F64E7007EF6B2 /* AppDelegate.m */,
+				B60E2B3122E7235900343E27 /* NavigationController.h */,
+				B60E2B3222E7235900343E27 /* NavigationController.m */,
 				B6BE29891F1F64E7007EF6B2 /* ViewController.h */,
 				B6BE298A1F1F64E7007EF6B2 /* ViewController.m */,
 				B6BE29B61F1F6550007EF6B2 /* TableViewController.h */,
@@ -299,6 +304,7 @@
 				B6BE29881F1F64E7007EF6B2 /* AppDelegate.m in Sources */,
 				B6BE29851F1F64E7007EF6B2 /* main.m in Sources */,
 				B6BE29B81F1F6550007EF6B2 /* TableViewController.m in Sources */,
+				B60E2B3322E7235900343E27 /* NavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

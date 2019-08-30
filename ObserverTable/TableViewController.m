@@ -16,21 +16,34 @@
 @end
 
 @implementation TableViewController
+
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
     _header.source = [NSDictionary dictionary];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    self.navigationController.navigationBarHidden = YES;
-    __weak typeof(self) weakSelf = self;
-    self.navigationController.interactivePopGestureRecognizer.delegate = weakSelf;
+    
+    if (@available(iOS 11.0, *)) {
+        self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
+    
     _header = [[HederView alloc] initWithFrame:CGRectMake(0, 0, self.tableView.bounds.size.width, 200)];
     self.tableView.tableHeaderView = _header;
     //设置数据源一定要在设置为headerView之后
     _header.source = @{};
 }
+
+
 -(void)dealloc{
     [_header.superview removeObserver:_header forKeyPath:@"contentOffset" context:(__bridge void * _Nullable)(NSStringFromClass([_header class]))];
     NSLog(@"dealloc");

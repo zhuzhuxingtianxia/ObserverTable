@@ -17,10 +17,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
 }
 
 - (IBAction)pushNextVC:(id)sender {
     TableViewController *table = [[TableViewController alloc] init];
+//    TableViewController *table = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"TableViewController"];
     [self.navigationController pushViewController:table animated:YES];
     
 }
